@@ -85,7 +85,7 @@ class FirstFragment : FragmentBase() {
         val helper = RSAHelper(requireContext())
         helper.store()
         val current = Calendar.getInstance().time
-        val formatter = SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS")
+        val formatter = SimpleDateFormat("yyyy-MM-dd HHmmss.SSS")
         val formatted = formatter.format(current)
         helper.exportPublicKey("${requireContext().externalCacheDir!!.absolutePath}/${formatted}.key")
     }
